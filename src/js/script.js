@@ -1,20 +1,25 @@
 // API URL
-const apiUrl = "https://openapi.programming-hero.com/api/phones?search=iphone";
+// const apiUrl = "";
 
-const loadedPhone = async () => {
-  const response = await fetch(apiUrl);
+const loadedPhone = async (searchText) => {
+  const response = await fetch(
+    `https://openapi.programming-hero.com/api/phones?search=${searchText}`
+  );
   const phoneObject = await response.json();
   const phones = phoneObject.data;
   displayData(phones);
 };
 
 function displayData(phones) {
-  const phoneContainer = document.getElementById("product-container");
-  phones.forEach((phone) => {
-    console.log(phones);
+    const phoneContainer = document.getElementById("product-container");
+    phoneContainer.textContent = "";
+    phones = phones.slice(0,6)
+  phones.forEach(phone => {
+    console.log(phone);
     const div = document.createElement("div");
     div.classList = "flex flex-col gap-2 justify-center items-center";
-    div.innerHTML = `<!-- img -->
+      div.innerHTML = `
+    <!-- img -->
           <div class="bg-[#f3f8ff] p-5 rounded-md">
             <img src="./images/phone1.svg" alt="" class="" />
           </div>
@@ -33,4 +38,12 @@ function displayData(phones) {
           </div>`;
     phoneContainer.appendChild(div);
   });
+}
+
+loadedPhone();
+
+function  searchPhone() {
+    const searchField = document.getElementById("searchField");
+    const searchText = searchField.value;
+    loadedPhone(searchText);
 }
