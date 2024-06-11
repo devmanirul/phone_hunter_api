@@ -15,9 +15,6 @@
         placeholder="Search your phone"
         class="searchField bg-[#f3f3f3] rounded text-xs px-8 py-2 outline-none w-4/12"
       />
-      <div class="absolute left-[385px] top-14">
-        <img src="./images/search.svg" alt="" class="" />
-      </div>
       <button onclick="searchPhone()"
         class="absolute right-[353px] top-[52px] bg-blue-700 px-10 py-1 text-white rounded-md"
       >
@@ -28,6 +25,18 @@
         <!-- card-1 -->
         
       </div>
+    
+    </section>
+    <!-- loading section -->
+     <section  id="spinner" class="flex hidden justify-center items-center">
+      <img src="" alt="" class="">
+     </section>
+    <section id="showMore" class="hidden max-w-7xl mx-auto flex justify-center items-center">
+      <button id="showMore"
+        class="bg-green-700 px-10 py-1 text-white rounded-md"
+      >
+        SHOW MORE
+      </button>
     </section>
     <script src="js/script.js"></script>
   </body>
