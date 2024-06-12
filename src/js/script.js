@@ -9,7 +9,7 @@ const loadedPhones = async (searchText) => {
   const phones = phoneObject.data;
   displayData(phones);
 };
-
+// display functiong
 function displayData(phones) {
   const phoneContainer = document.getElementById("product-container");
   const showMore = document.getElementById("showMore");
@@ -49,14 +49,14 @@ function displayData(phones) {
 }
 
 loadedPhones();
-
+// search area function
 function searchPhone() {
   const searchField = document.getElementById("searchField");
   const searchText = searchField.value;
   spinner(true);
   loadedPhones(searchText);
 }
-
+// spinner funtion
 function spinner(isLoading) {
   const loader = document.getElementById("spinner");
   if (isLoading) {
