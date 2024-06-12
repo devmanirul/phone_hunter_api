@@ -44,23 +44,23 @@ function displayData(phones) {
           </div>`;
     phoneContainer.appendChild(div);
   });
-  // spinner(false);
+  spinner(false);
 }
 
 loadedPhones();
 
-// function  searchPhone() {
-//     const searchField = document.getElementById("searchField");
-//   const searchText = searchField.value;
-//   spinner(true);
-//     loadedPhones(searchText);
-// }
+function searchPhone() {
+  const searchField = document.getElementById("searchField");
+  const searchText = searchField.value;
+  spinner(true);
+  loadedPhones(searchText);
+}
 
-// function spinner(isLoading) {
-//   const loader = document.getElementById("spinner");
-//   if (isLoading) {
-//     loader.classList.remove("hidden");
-//   } else {
-//     loader.classList.add("hidden");
-//   }
-// }
+function spinner(isLoading) {
+  const loader = document.getElementById("spinner");
+  if (isLoading) {
+    loader.classList.remove("hidden");
+  } else {
+    loader.classList.add("hidden");
+  }
+}
