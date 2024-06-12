@@ -1,7 +1,7 @@
 // API URL
-// const apiUrl = "";
+// const apiUrl = "https://openapi.programming-hero.com/api/phones?search=iphone";
 
-const loadedPhone = async (searchText) => {
+const loadedPhones = async (searchText) => {
   const response = await fetch(
     `https://openapi.programming-hero.com/api/phones?search=${searchText}`
   );
@@ -11,20 +11,20 @@ const loadedPhone = async (searchText) => {
 };
 
 function displayData(phones) {
-    const phoneContainer = document.getElementById("product-container");
-    const showMore = document.getElementById("showMore");
-    if (phones.length > 9) {
-        showMore.classList.remove("hidden")
-    } else {
-        showMore.classList.add("hidden");
-    }
-    phoneContainer.textContent = "";
-    phones = phones.slice(0,6)
+  const phoneContainer = document.getElementById("product-container");
+  const showMore = document.getElementById("showMore");
+  if (phones.length > 9) {
+    showMore.classList.remove("hidden");
+  } else {
+    showMore.classList.add("hidden");
+  }
+  phoneContainer.textContent = "";
+  phones = phones.slice(0, 6);
   phones.forEach((phone) => {
     console.log(phone);
     const div = document.createElement("div");
     div.classList = "flex flex-col gap-2 justify-center items-center";
-      div.innerHTML = `
+    div.innerHTML = `
     <!-- img -->
           <div class="bg-[#f3f8ff] p-5 rounded-md">
             <img src="${phone.image}" alt="" class="" />
@@ -44,22 +44,23 @@ function displayData(phones) {
           </div>`;
     phoneContainer.appendChild(div);
   });
+  // spinner(false);
 }
 
-loadedPhone();
+loadedPhones();
 
-function  searchPhone() {
-    const searchField = document.getElementById("searchField");
-    const searchText = searchField.value;
-    loadedPhone(searchText);
-}
+// function  searchPhone() {
+//     const searchField = document.getElementById("searchField");
+//   const searchText = searchField.value;
+//   spinner(true);
+//     loadedPhones(searchText);
+// }
 
-function spinner() {
-    const loader = document.getElementById("spinner");
-    if (isLoading) {
-        loader.classList.remove("hidden")
-    } else {
-    loader.classList.add("hidden");
-
-    }
-}
+// function spinner(isLoading) {
+//   const loader = document.getElementById("spinner");
+//   if (isLoading) {
+//     loader.classList.remove("hidden");
+//   } else {
+//     loader.classList.add("hidden");
+//   }
+// }
