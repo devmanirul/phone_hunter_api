@@ -570,6 +570,10 @@ video {
   top: 52px;
 }
 
+.right-\[112px\] {
+  right: 112px;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -836,6 +840,10 @@ video {
 
   .md\:right-\[165px\] {
     right: 165px;
+  }
+
+  .md\:right-\[163px\] {
+    right: 163px;
   }
 
   .md\:w-4\/12 {
