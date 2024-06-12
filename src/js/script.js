@@ -29,7 +29,7 @@ function displayData(phones) {
           <div class="bg-[#f3f8ff] p-5 rounded-md">
             <img src="${phone.image}" alt="" class="" />
           </div>
-          <!-- bellow -->
+          <!-- content -->
           <div class="flex flex-col items-center justify-center gap-5">
             <h1 class="text-xl font-bold">${phone.phone_name}</h1>
             <p class="text-center">
