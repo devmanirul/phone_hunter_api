@@ -9,18 +9,18 @@
   <body class="max-w-7xl mx-auto lg:px-28 md:px-14 px-8 py-5">
     <!-- search section -->
     <section
-      class="relative flex flex-col justify-center items-center gap-5 border-2"
+      class="relative flex flex-col justify-center items-center gap-5"
     >
-      <p class="lg:text-3xl md:text-2xl font-bold">Search your phone</p>
+      <p class="lg:text-3xl md:text-2xl text-xl font-bold">Search your phone</p>
       <input
         type="text"
         placeholder="Search your phone"
         id="searchField"
-        class="bg-[#f3f3f3] rounded text-xs px-8 py-2 outline-none lg:w-4/12 md:w-6/12 w-full"
+        class="bg-[#f3f3f3] rounded text-xs lg:px-8 md:px-6 px-2 py-2 outline-none lg:w-4/12 md:w-6/12 w-full"
       />
       <button
         onclick="searchPhone()"
-        class="absolute lg:right-[353px] md:right-[163px] right-[112px] lg:top-[52px] bg-blue-700 px-10 py-1 text-white rounded-md"
+        class="absolute lg:right-[350px] md:right-[163px] right-[0px] lg:top-[56px] md:top-[52px] top-[47px] bg-blue-700 px-10 py-1 text-white rounded-md"
       >
         Search
       </button>
@@ -34,10 +34,10 @@
       />
     </section>
     <!-- product-container -->
-    <section id="product-container" class="grid grid-cols-3 gap-5 mt-7">
+    <section id="product-container" class="grid lg:grid-cols-3 md:grid-cols-3 gap-5 mt-7">
       <!-- card-1 -->
       <div
-        class="flex flex-col gap-2 justify-center items-center p-5 shadow-lg shadow-gray-300 rounded-md"
+        class="flex flex-col gap-2 justify-center items-center p-3 shadow-lg shadow-gray-300 rounded-md"
       >
         <div class="bg-[#f3f8ff] p-5 rounded-md">
           <img src="./images/phone1.svg" alt="" class="" />
